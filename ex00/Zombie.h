@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 13:37:12 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/10/13 15:40:19 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/10/14 14:07:39 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,20 @@
 #include <iostream>
 
 
-// class Zombie
-// {
-//     private:
-//         std::string name;
-//     public:
-//         void    announce( void );
-//     Zombie(void);
-//     ~Zombie(void)
-//     {
-//         std::cout << "Zomvie Foo destroyed" ;
-//     }
+class Zombie
+{
+    private:
+        std::string name;
+    public:
+        void    announce( void );
+        Zombie(std::string &ZombieName);
+        ~Zombie(void);
     
     
-// }
+};
 
+Zombie* newZombie( std::string name );
+void randomChump( std::string name );
 
 #endif
  

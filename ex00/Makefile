@@ -4,9 +4,9 @@ Name = Zombie
 
 CPP = c++ -Wall -Wextra -Werror -std=c++98
 
-OBJ = $(SRC:.cpp=.o)
-
 SRC = Zombie.cpp main.cpp  newZombie.cpp randomChump.cpp
+
+OBJ = $(SRC:.cpp=.o)
 
 all : $(Name)
 
