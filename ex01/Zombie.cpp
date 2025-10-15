@@ -6,8 +6,16 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:45:50 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/10/14 17:38:19 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/10/15 17:18:35 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.h"
+
+
+
+void announce()
+{
+            std::cout << "My name is "  << name << " and i am a Zombie\n";
+} 
+        
