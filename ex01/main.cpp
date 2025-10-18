@@ -6,10 +6,21 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:38:31 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/10/15 16:33:55 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/10/16 10:53:02 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.h"
 
-
+int main()
+{
+    Zombie *my_z = zombieHorde(10, "Oussama");
+    if(!my_z)
+        return 0;
+    for(int i = 0; i < 10 ; ++i)
+    {
+        my_z->announce();
+    }
+    delete[] my_z;
+    return 0; 
+}

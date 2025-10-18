@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:46:05 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/10/15 17:21:08 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/10/16 11:10:14 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,11 @@ class Zombie
     private:
         std::string name;
     public:
-        Zombie(std::string &ZombieName);
+        Zombie() : name("") {
+            std::cout << "------------\n";
+        }
+        Zombie(std::string &My_Name);
+        ~Zombie();
         void announce(); 
         
 };

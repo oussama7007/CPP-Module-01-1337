@@ -13,7 +13,7 @@ all : $(Name)
 $(Name) : $(OBJ)
 	$(CPP) $(OBJ) -o $@
 
-%.o:%.cpp
+%.o:%.cpp Zombie.h
 	$(CPP) -c $< -o $@
 
 

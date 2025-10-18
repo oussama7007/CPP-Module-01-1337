@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 13:37:12 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/10/14 14:07:39 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/10/18 16:18:31 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,16 @@
 #define ZOMBIE_H
 
 #include <iostream>
-
-
+   
+  
 class Zombie
 {
     private:
         std::string name;
     public:
-        void    announce( void );
+        void *    announce( void );
         Zombie(std::string &ZombieName);
-        ~Zombie(void);
-    
-    
+        ~Zombie(void); 
 };
 
 Zombie* newZombie( std::string name );
