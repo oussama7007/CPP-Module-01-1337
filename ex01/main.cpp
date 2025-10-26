@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:38:31 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/10/16 10:53:02 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/10/26 10:26:42 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main()
 {
+    
     Zombie *my_z = zombieHorde(10, "Oussama");
     if(!my_z)
         return 0;
@@ -24,3 +25,4 @@ int main()
     delete[] my_z;
     return 0; 
 }
+

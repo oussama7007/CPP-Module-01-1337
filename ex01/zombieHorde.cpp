@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:12:29 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/10/16 10:52:21 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/10/26 10:25:47 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Zombie *zombieHorde( int N, std::string name )
     Zombie *My_Zombie = new Zombie[N];
     for(int i = 0; i < N ; ++i)
     {
-        My_Zombie[i] = Zombie(name);
+        My_Zombie[i].setName(name);
     }
     return My_Zombie;
 }
