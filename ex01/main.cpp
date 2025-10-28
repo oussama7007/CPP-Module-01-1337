@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:38:31 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/10/26 10:26:42 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/10/26 11:51:35 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main()
         return 0;
     for(int i = 0; i < 10 ; ++i)
     {
-        my_z->announce();
+        my_z[i].announce();
     }
     delete[] my_z;
     return 0; 
