@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 10:52:19 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/05 12:25:00 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/05 16:39:19 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,5 @@ int main()
     // jim.attack();
     // club.setType("some other type of club");
     // jim.attack();
+    return (0);
 }

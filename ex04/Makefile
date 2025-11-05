@@ -9,7 +9,8 @@ obj = ${src:.cpp=.o}
 
 all : ${NAME}
 
-${NAME} :
+${NAME} : ${obj}
+	${CPP} ${obj} -o $@
 
 %.o:%.cpp 
 	${CPP} -c $< -o $@
