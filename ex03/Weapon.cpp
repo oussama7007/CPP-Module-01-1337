@@ -6,8 +6,12 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 13:00:44 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/02 13:16:22 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/04 12:45:53 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#
+#include "Weapon.h"
+
+Weapon::Weapon(std::string Newtype) : type(Newtype){}
+
+
