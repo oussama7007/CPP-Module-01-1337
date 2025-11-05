@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.h                                           :+:      :+:    :+:   */
+/*   HumanB.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 18:44:06 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/05 10:30:46 by oait-si-         ###   ########.fr       */
+/*   Created: 2025/11/05 10:29:00 by oait-si-          #+#    #+#             */
+/*   Updated: 2025/11/05 10:48:07 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef HUMANA_H
-#define HUMANA_H
+#ifndef HUMAN_B
+#define HUMAN_B
 
 #include "Weapon.h"
 
-class   HumanA
+class   HumanB
 {
     private:
         std::string name;
-        Weapon& weapon;
+        Weapon* weapon;
     public:
-        HumanA(std::string name, Weapon& weapon);
-        void attack(void);
+        HumanB(std::string name);
+        void    setWeapon(Weapon& weapon);
+        void    attack(void);
         
 };
-       
+
+
 #endif

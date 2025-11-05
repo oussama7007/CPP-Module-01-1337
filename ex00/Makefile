@@ -23,3 +23,4 @@ clean :
 fclean : clean
 	rm -rf $(Name)
 
+re : fclean all
