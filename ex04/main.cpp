@@ -6,16 +6,23 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 10:26:09 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/06 12:30:18 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/06 15:25:21 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 
+void    t()
+{
+    system("lsof -c a.out");
+}
 
 int main(int ac , char **av )
 {
+    atexit(t);
+    std::string content;
+    std::string line;
     std::ifstream	in_file; // input file stream (read from a file) 
     if (ac != 4)
 	{
@@ -29,5 +36,9 @@ int main(int ac , char **av )
         std::cout << "Error: Could not open input file." << std::endl;
         return 1;
     }
-    
+    while(std::getline(in_file, line))
+    {
+        content += line;
+        content += '\n'; 
+    }
 }
