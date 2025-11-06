@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 10:26:09 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/06 20:38:48 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/06 21:32:43 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,11 @@ void    create_replaced_file( std::string content, char **av)
     }
     std::string s1 = av[2];
     std::string s2 = av[3];
-    
+    if(s1.empty())
+    {
+            std::cout << "Error: The string to find (s1) cannot be empty." << std::endl;
+            return;
+    }
     size_t pos = content.find(s1);
     while(pos != std::string::npos)
     {
@@ -71,8 +75,10 @@ int main(int ac , char **av )
     while(std::getline(input_file_stream, line))
     {
         content += line;
-        content += '\n'; 
+        if(input_file_stream.peek() != EOF)
+            content += '\n'; 
     }
+
     input_file_stream.close();
     create_replaced_file(content, av);
     return 0;

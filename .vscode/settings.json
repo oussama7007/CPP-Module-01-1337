@@ -20,6 +20,13 @@
         "unordered_map": "cpp",
         "vector": "cpp",
         "__locale": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "__string": "cpp",
+        "chrono": "cpp",
+        "filesystem": "cpp",
+        "iomanip": "cpp",
+        "iterator": "cpp",
+        "locale": "cpp",
+        "ostream": "cpp"
     }
 }

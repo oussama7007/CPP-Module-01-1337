@@ -1,4 +1,3 @@
-
 NAME = rep
 
 CPP = c++ -Wall -Werror -Wextra -std=c++98
@@ -20,3 +19,6 @@ clean :
 
 fclean : clean
 	rm -f ${NAME}
+
+re : fclean all 
+#hello1orld
