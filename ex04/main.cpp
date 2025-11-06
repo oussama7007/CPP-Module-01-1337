@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 10:26:09 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/06 15:25:21 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/06 16:24:45 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,13 @@ void    t()
 {
     system("lsof -c a.out");
 }
-
+void    create_replace_file( std::string content, char **av)
+{
+    std::ofstream   out_file_stream;
+    out_file_stream.open((std::string(av[1]) + ".replace").c_str());
+    
+    
+}
 int main(int ac , char **av )
 {
     atexit(t);
@@ -41,4 +47,7 @@ int main(int ac , char **av )
         content += line;
         content += '\n'; 
     }
+    in_file.close();
+    create_replace_file(content, av);
+    return 0;
 }

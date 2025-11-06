@@ -1,7 +1,7 @@
 
 NAME = rep
 
-CPP = c++ -Wall -Werror -Wextra
+CPP = c++ -Wall -Werror -Wextra -std=c++98
 
 src = main.cpp
 
