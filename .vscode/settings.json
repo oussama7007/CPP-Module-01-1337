@@ -4,6 +4,22 @@
         "fstream": "cpp",
         "iosfwd": "cpp",
         "__config": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "string": "cpp",
+        "__bit_reference": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "deque": "cpp",
+        "initializer_list": "cpp",
+        "memory": "cpp",
+        "sstream": "cpp",
+        "stack": "cpp",
+        "string_view": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "__locale": "cpp",
+        "ios": "cpp"
     }
 }
