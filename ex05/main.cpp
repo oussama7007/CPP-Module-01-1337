@@ -6,10 +6,16 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 10:46:20 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/07 14:19:02 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/07 20:35:11 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.h"
 
 
+int main()
+{
+    Harl harl_obj;
+
+    harl_obj.coplain("WARNING");
+}
