@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 10:26:54 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/07 15:16:28 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/07 15:45:34 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,4 @@ void Harl::error(void) {
     std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-
+H
