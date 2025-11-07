@@ -14,5 +14,14 @@ all : ${NAME}
 ${NAME} : ${OBJ}
 	${CPP} ${OBJ} -o $@
 
-%.cpp:%.o Harl.h 
-	${CPP} ${}
+%.o:%.cpp Harl.h 
+	${CPP} -c $< -o $@ 
+
+re : fclean all
+
+clean :
+	rm -f ${OBJ}
+
+fclean : clean 
+	rm -f ${NAME}
+
