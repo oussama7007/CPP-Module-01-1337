@@ -1,6 +1,6 @@
 NAME = rep
 
-CPP =  c++ 
+CPP =  c++
 
 FLAGS = -Wall -Werror -Wextra -std=c++98
 

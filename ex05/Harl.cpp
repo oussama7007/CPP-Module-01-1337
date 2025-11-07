@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 10:26:54 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/07 21:00:04 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/07 21:02:53 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ void    Harl::complain(std::string level)
         }
     }
     std::cout << "[ INVALID ]" << std::endl;
-    std::cout << "Error: invalid input, please enter either of DEBUG/INFO/ERROR/WARNING" << std::endl;
+    std::cout << "Error: invalid input, please enter either of DEBUG, INFO, ERROR, WARNING" << std::endl;
+    return;
 }
