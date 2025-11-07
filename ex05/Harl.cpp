@@ -6,11 +6,11 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 10:26:54 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/07 20:20:13 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/07 21:00:04 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <Harl.h>
+#include "Harl.h"
 
 
 void Harl::debug(void) {
@@ -53,4 +53,6 @@ void    Harl::complain(std::string level)
             return;
         }
     }
+    std::cout << "[ INVALID ]" << std::endl;
+    std::cout << "Error: invalid input, please enter either of DEBUG/INFO/ERROR/WARNING" << std::endl;
 }
