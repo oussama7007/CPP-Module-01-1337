@@ -6,14 +6,14 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:30:21 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/10/14 13:31:07 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/08 15:03:53 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Zombie.h"
 
-Zombie* newZombie( std::string name )
+Zombie newZombie( std::string name )
 {
-    return new Zombie(name);
+    return  Zombie(name);
 }
