@@ -6,7 +6,14 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 21:06:33 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/07 21:06:34 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/08 11:03:34 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Harl.h"
+
+int main()
+{
+    Harl harl;
+    harl.complain("INFO");
+}
