@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 10:26:09 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/09 13:25:10 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/09 19:02:02 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,19 @@ of the file (truncates it) so you can start writing from the beginning.
 void    create_replaced_file( std::string content, char **av)
 {
     std::ofstream   out_file_stream;
-    out_file_stream.open((std::string(av[1]) + ".replace").c_str());
-    if(!out_file_stream.is_open())
-    {
-            std::cout << "Error: Could not create output file." << std::endl;
-            return ;
-    }
+
     std::string s1 = av[2];
     std::string s2 = av[3];
     if(s1.empty())
     {
             std::cout << "Error: The string to find (s1) cannot be empty." << std::endl;
             return;
+    }
+    out_file_stream.open((std::string(av[1]) + ".replace").c_str());
+    if(!out_file_stream.is_open())
+    {
+            std::cout << "Error: Could not create output file." << std::endl;
+            return ;
     }
     size_t pos = content.find(s1);
     while(pos != std::string::npos)
@@ -53,7 +54,7 @@ void    create_replaced_file( std::string content, char **av)
 }
 int main(int ac , char **av )
 {
-
+    std::string content ;
     std::string line;
     std::ifstream	input_file_stream(av[1]); 
     
@@ -69,16 +70,12 @@ int main(int ac , char **av )
         std::cout << "Error: Could not open input file." << std::endl;
         return 1;
     }
-    // while(std::getline(input_file_stream, line))
-    // {
-    //     content += line;
-    //     if(input_file_stream.peek() != EOF)
-    //         content += '\n'; 
-    // }
-    std::string content(
-    (std::istreambuf_iterator<char>(input_file_stream)),
-    std::istreambuf_iterator<char>()
-    );
+
+    input_file_stream.seekg(0, std::ios::end);
+    std::streamsize size = input_file_stream.tellg();
+    input_file_stream.seekg(0, std::ios::beg);
+    content.resize(size);
+    input_file_stream.read(&content[0], size);
     input_file_stream.close();
     create_replaced_file(content, av);
     return 0;
