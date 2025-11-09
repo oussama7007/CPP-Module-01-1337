@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 10:26:09 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/06 21:54:15 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/09 13:25:10 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,7 @@ If the file does not exist: It creates a new, empty file for you.
 If the file does exist: By default, it erases all the content 
 of the file (truncates it) so you can start writing from the beginning.
 */
-void    t()
-{
-    system("lsof -c a.out");
-}
+
 void    create_replaced_file( std::string content, char **av)
 {
     std::ofstream   out_file_stream;
@@ -56,29 +53,32 @@ void    create_replaced_file( std::string content, char **av)
 }
 int main(int ac , char **av )
 {
-    atexit(t);
-    std::string content;
+
     std::string line;
-    std::ifstream	input_file_stream; // input file stream (read from a file) 
+    std::ifstream	input_file_stream(av[1]); 
+    
     if (ac != 4)
 	{
 		std::cout << "Error: please enter filenaem, old_string, new_string" << std::endl;
 		return (1);
 	}
-    input_file_stream.open(av[1]); // file does not exist., is is a dir , invalid path 
+   
     
     if(!input_file_stream.is_open())
     {
         std::cout << "Error: Could not open input file." << std::endl;
         return 1;
     }
-    while(std::getline(input_file_stream, line))
-    {
-        content += line;
-        if(input_file_stream.peek() != EOF)
-            content += '\n'; 
-    }
-
+    // while(std::getline(input_file_stream, line))
+    // {
+    //     content += line;
+    //     if(input_file_stream.peek() != EOF)
+    //         content += '\n'; 
+    // }
+    std::string content(
+    (std::istreambuf_iterator<char>(input_file_stream)),
+    std::istreambuf_iterator<char>()
+    );
     input_file_stream.close();
     create_replaced_file(content, av);
     return 0;
