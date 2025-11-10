@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 10:26:09 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/09 19:02:02 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/10 14:14:14 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,9 @@ int main(int ac , char **av )
     std::streamsize size = input_file_stream.tellg();
     input_file_stream.seekg(0, std::ios::beg);
     content.resize(size);
+    
     input_file_stream.read(&content[0], size);
+    
     input_file_stream.close();
     create_replaced_file(content, av);
     return 0;
