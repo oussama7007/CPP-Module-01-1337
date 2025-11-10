@@ -6,21 +6,13 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 10:26:09 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/10 14:14:14 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/10 15:56:37 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 
-
-/*
-test it
-std::ofstream (Output Stream):
-If the file does not exist: It creates a new, empty file for you.
-If the file does exist: By default, it erases all the content 
-of the file (truncates it) so you can start writing from the beginning.
-*/
 
 void    create_replaced_file( std::string content, char **av)
 {
@@ -71,7 +63,7 @@ int main(int ac , char **av )
         return 1;
     }
 
-    input_file_stream.seekg(0, std::ios::end);
+    input_file_stream.seekg(10, std::ios::end);
     std::streamsize size = input_file_stream.tellg();
     input_file_stream.seekg(0, std::ios::beg);
     content.resize(size);
