@@ -2,7 +2,7 @@
 
 Name = Zombie
 
-CPP = c++ -Wall -Wextra -Werror -std=c++98
+CPP = c++ -Wall -Wextra -Werror -std=c++98 #-fsanitize=address 
 
 SRC = Zombie.cpp main.cpp  newZombie.cpp randomChump.cpp
 

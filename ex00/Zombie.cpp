@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:54:40 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/10/14 14:31:05 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/08 16:39:02 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ Zombie::Zombie(std::string &ZombieName) : name(ZombieName){};
 
 Zombie::~Zombie(void)
 {
-            std::cout << "\nZombie " << name <<" destroyed" ;
+            std::cout << "Zombie " << name <<" destroyed" << std::endl;
 }
